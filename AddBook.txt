@@ -1,0 +1,299 @@
+1
+Nguoi xa la
+Albert Camus
+2
+Di tim thoi gian da mat
+Marcel Proust
+3
+Vu an
+Franz Kafka
+4
+Hoang tu be
+Antoine de Saint-Exupery
+5
+Than phan con nguoi
+Andre Malraux
+6
+Hanh trinh den tan cung den toi
+Louis-Ferdinand Celine
+7
+Chum nho uat han
+John Steinbeck
+8
+Chuong nguyen hon ai
+Ernest Hemingway
+9
+Le Grand Meaulnes
+Alain Fournier
+10
+Bot thang nay
+Boris Vian
+11
+Gioi tinh thu hai
+Simone de Beauvoir
+12
+Cho doi Godot
+Samuel Beckett
+13
+Ton tai va hu vo
+Jean-Paul Sartre
+14
+Ten cua doa hoa hong
+Umberto Eco
+15
+Quan dao Gulag
+Aleksandr Solzhenitsyn
+16
+Paroles
+Jacques Prevert
+17
+Alcools Guillaume
+Apollinaire
+18
+Bong sen xanh
+Herge
+19
+Nhat ky Anne Frank
+Anne Frank
+20
+Nhiet doi buon
+Claude Levi-Strauss
+21
+The gioi moi tuoi dep
+Aldous Huxley
+22
+Mot chien tam tu
+George Orwell
+23
+Asterix xu Galois
+René Goscinny and Albert Uderzo
+24
+La Cantatrice chauve
+Eugene Ionesco
+25
+Ba tieu luan ve ly thuyet
+Sigmund Freud
+26
+Vuc tham
+Marguerite Yourcenar
+27
+Lolita
+Vladimir Nabokov
+28
+Ulysses
+James Joyce
+29
+The Tartar Steppe
+Dino Buzzati
+30
+Bon lam bac gia
+Andre Gide
+31
+Le Hussard sur le toit
+Jean Giono
+32
+Belle du Seigneur
+Albert Cohen
+33
+Tram nam co don
+Gabriel Garcia Marquez
+34
+Am thanh va cuong no
+William Faulkner
+35
+Therese Desqueyroux
+Francois Mauriac
+36	Zazie trong tau dien ngam
+Raymond Queneau
+37
+Confusion of Feelings
+Stefan Zweig
+38
+Cuon theo chieu gio
+Margaret Mitchell
+39
+Nguoi tinh cua phu nhan
+Chatterley	D. H. Lawrence
+40
+Nui than
+Thomas Mann
+41
+Buon oi chao mi
+Francoise Sagan
+42
+Le Silence de la mer
+Vercors
+43
+La Vie mode d'emploi
+Georges Perec
+44
+Con cho san cua dong ho
+Baskerville	Arthur Conan Doyle
+45
+Sous le soleil de Satan
+Georges Bernanos
+46
+Dai gia Gatsby
+F. Scott Fitzgerald
+47
+Loi dua cot
+Milan Kundera
+48
+Bong ma giua trua
+Alberto Moravia
+49
+Vu am sat ong Roger Ackroyd
+Agatha Christie
+50
+Nadja
+Andre Breton
+51
+Aurelien
+Louis Aragon
+52
+Le Soulier de satin
+Paul Claudel
+53
+Sei personaggi in cerca d'autore
+Luigi Pirandello
+54
+The Resistible Rise of Arturo Ui
+Bertolt Brecht
+55
+Vendredi ou les Limbes du Pacifique
+Michel Tournier
+56
+Chien tranh giua cac the gioi
+H. G. Wells
+57
+Se questo e un uomo
+Primo Levi
+58
+Chua te nhung chiec nhan
+J. R. R. Tolkien
+59
+Les Vrilles de la vigne
+Colette
+60
+Capitale de la douleur
+Paul Éluard
+61
+Martin Eden
+Jack London
+62
+Ballad of the Salt Sea
+Hugo Pratt
+63
+Le Degre zero de l'ecriture
+Roland Barthes
+64
+Danh du da mat cua Katharina Blum
+Heinrich Boll
+65
+Bo bien Syrtes
+Julien Gracq
+66
+Les Mots et les Choses
+Michel Foucault
+67
+Tren duong
+Jack Kerouac
+68
+Cuoc phieu luu ky dieu cua Nils
+Selma Lagerlof
+69
+Can phong rieng
+Virginia Woolf
+70
+The Martian Chronicles
+Ray Bradbury
+71
+Le Ravissement de Lol V. Stein
+Marguerite Duras
+72
+Le Proces-verbal
+J. M. G. Le Clezio
+73
+Tropismes
+Nathalie Sarraute
+74
+Journal
+Jules Renard
+75
+Lord Jim
+Joseph Conrad
+76
+Ecrits
+Jacques Lacan
+77
+Le Theatre et son double
+Antonin Artaud
+78
+Manhattan Transfer
+John Dos Passos
+79
+Ficciones
+Jorge Luis Borges
+80
+Moravagine
+Blaise Cendrars
+81
+Vien tuong cua dao quan chet
+Ismail Kadare
+82
+Lua chon cua Sophie
+William Styron
+83
+Gypsy Ballads
+Federico Garcia Lorca
+84
+Hanh khach bi an
+Georges Simenon
+85
+Notre-Dame-des-Fleurs
+Jean Genet
+86
+The Man Without Qualities
+Robert Musil
+87
+Fureur et Mystere
+René Char
+88
+Bat tre dong xanh
+J. D. Salinger
+89
+No Orchids For Miss Blandish
+James Hadley Chase
+90
+Blake et Mortimer
+Edgar P. Jacobs
+91
+The Notebooks of Malte Laurids Brigge
+Rainer Maria Rilke
+92
+La Modification
+Michel Butor
+93
+The Origins of Totalitarianism
+Hannah Arendt
+94
+Nghe nhan va Margarita
+Mikhail Bulgakov
+95
+The Rosy Crucifixion
+Henry Miller
+96
+Giac ngu dai
+Raymond Chandler
+97
+Amers
+Saint-John Perse
+98
+Gaston
+Andre Franquin
+99
+Under the Volcano
+Malcolm Lowry
+100
+Nhung dua con cua nua dem
+Salman Rushdie
