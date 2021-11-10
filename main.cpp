@@ -185,7 +185,9 @@ int main()
                 break;
             case 2:
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
-                cin >> findName;
+                cin.ignore();
+                getline(cin, findName);
+                
                 sn = l1.head;
                 while (sn != NULL)
                 {
