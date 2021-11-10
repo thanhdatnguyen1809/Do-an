@@ -7,14 +7,16 @@ struct nodesv
 };
 class qlsv
 {
-private:
+public:
     nodesv *head;
     nodesv *tail;
 
 public:
     qlsv();
     ~qlsv();
-    void add(const sv &);
+    bool isEmpty();
+    void addhead(const sv &);
+    void addtail(const sv &);
     void show();
     void searchname(const string &);
     void searchid(const string &);

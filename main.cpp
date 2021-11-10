@@ -5,7 +5,7 @@ int quantity = 0; // số lượng của book
 
 int main()
 {
-    ifstream filein; //file nhap sv
+    ifstream filein; // file nhap sv
     ifstream fileAdd;
     ifstream fileDel;
     ifstream fileDel2; // mở file DelBook 1 lần nữa
@@ -13,7 +13,7 @@ int main()
     int thaydongtestnayko;
     int chucnangmenu;
     qlsv db;
-    QLS l1; // nhap sach vao kho sach
+    QLS l1;  // nhap sach vao kho sach
     QLSM l2; // nhap sach vao he thong sach da muon
     sv p;
     string mssv, hoten, lop, khoa, sdt, t;
@@ -55,7 +55,7 @@ int main()
                 int n;
                 string s1, s2;
                 fileAdd >> n;
-                
+
                 b1.SetID(n);
                 fileAdd.ignore();
                 getline(fileAdd, s1);
@@ -126,13 +126,13 @@ int main()
                 cout << "Failed to open this file!" << endl;
                 return -1;
             }
-            while(!fileBorrow.eof())
+            while (!fileBorrow.eof())
             {
                 BBook b2;
                 int n;
                 string s1, s2, s3;
                 fileBorrow >> n;
-                
+
                 b2.SetID(n);
                 fileBorrow.ignore();
                 getline(fileBorrow, s1);
@@ -153,14 +153,14 @@ int main()
             cout << "2. Xuat sach da muon" << endl;
             int luachon;
             cin >> luachon;
-            switch(luachon)
+            switch (luachon)
             {
-                case 1:
-                    l1.xuat();
-                    break;
-                case 2: 
-                    l2.xuat();
-                    break;
+            case 1:
+                l1.xuat();
+                break;
+            case 2:
+                l2.xuat();
+                break;
             }
             system("pause");
             break;
@@ -187,7 +187,7 @@ int main()
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
                 cin.ignore();
                 getline(cin, findName);
-                
+
                 sn = l1.head;
                 while (sn != NULL)
                 {
@@ -215,6 +215,9 @@ int main()
             }
             while (!filein.eof())
             {
+                sv p;
+                string mssv, hoten, lop, khoa, sdt, t;
+
                 getline(filein, mssv);
                 p.setmssv(mssv);
                 getline(filein, hoten);
@@ -225,7 +228,7 @@ int main()
                 p.setfaculty(khoa);
                 getline(filein, sdt);
                 p.setphonenumber(sdt);
-                db.add(p);
+                db.addtail(p);
             }
             filein.close();
             system("pause");
