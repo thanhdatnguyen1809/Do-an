@@ -73,3 +73,5 @@ void qlsv::searchname(const string &t)
         cout << "Khong tim thay sinh vien can tim" << endl;
     }
 }
+
+cout<<"Hoa dep trai";
