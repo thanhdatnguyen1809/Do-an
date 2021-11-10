@@ -30,7 +30,7 @@ int main()
         cout << "4. Tra sach" << endl;
         cout << "5. Xuat sach" << endl;
         cout << "6. Tim kiem sach" << endl;
-        cout << "7. Them sinh vien" << endl;
+        cout << "7. Them sinh vien tu file" << endl;
         cout << "8. Xuat thong tin sinh vien" << endl;
         cout << "9. Tim kiem sinh vien" << endl;
         cout << "10. Gia han sach" << endl;
@@ -233,7 +233,6 @@ int main()
             system("pause");
             break;
         case 8:
-            system("cls");
             db.show();
             system("pause");
             break;
@@ -253,7 +252,8 @@ int main()
                 break;
             case 2:
                 cout << "Nhap ten sinh vien can tim" << endl;
-                cin >> timsv;
+                cin.ignore();
+                getline(cin, timsv);
                 db.searchname(timsv);
                 system("pause");
             default:

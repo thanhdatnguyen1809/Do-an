@@ -47,17 +47,21 @@ void qlsv::addtail(const sv &s)
 }
 void qlsv::show()
 {
-    nodesv *p = this->head;
-    while (p != nullptr)
+    int k = 0;
+    nodesv *p = new nodesv;
+    p = this->head;
+    for (p; p != nullptr; p = p->next)
     {
+        cout << "_______________________________________" << endl;
         cout << "MSSV: " << p->data.getmssv() << endl;
         cout << "Ho va ten: " << p->data.getname() << endl;
         cout << "Lop: " << p->data.getclasss() << endl;
         cout << "Khoa: " << p->data.getfaculty() << endl;
         cout << "So dien thoai: " << p->data.getphonenumber() << endl;
         cout << "_______________________________________" << endl;
-        p = p->next;
+        k++;
     }
+    cout << "So lan dem la :" << k;
 }
 void qlsv::searchid(const string &t)
 {
@@ -67,11 +71,13 @@ void qlsv::searchid(const string &t)
     {
         if (p->data.getmssv() == t)
         {
+            cout << "_______________________________________" << endl;
             cout << "MSSV: " << p->data.getmssv() << endl;
             cout << "Ho va ten: " << p->data.getname() << endl;
             cout << "Lop: " << p->data.getclasss() << endl;
             cout << "Khoa: " << p->data.getfaculty() << endl;
             cout << "So dien thoai: " << p->data.getphonenumber() << endl;
+            cout << "_______________________________________" << endl;
             k++;
         }
         p = p->next;
@@ -87,13 +93,15 @@ void qlsv::searchname(const string &t)
     int k = 0;
     while (p != nullptr)
     {
-        if (t.compare(p->data.getfaculty()) == 0)
+        if (p->data.getname() == t)
         {
+            cout << "_______________________________________" << endl;
             cout << "MSSV: " << p->data.getmssv() << endl;
             cout << "Ho va ten: " << p->data.getname() << endl;
             cout << "Lop: " << p->data.getclasss() << endl;
             cout << "Khoa: " << p->data.getfaculty() << endl;
             cout << "So dien thoai: " << p->data.getphonenumber() << endl;
+            cout << "_______________________________________" << endl;
             k++;
         }
         p = p->next;
