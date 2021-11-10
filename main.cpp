@@ -10,7 +10,7 @@ int main()
     ifstream fileDel;
     ifstream fileDel2; // mở file DelBook 1 lần nữa
     ifstream fileBorrow;
-
+    int thaydongtestnayko;
     int chucnangmenu;
     qlsv db;
     QLS l1; // nhap sach vao kho sach
