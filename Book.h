@@ -9,6 +9,8 @@ protected:
     int ID;
     string name;
     string author;
+    int pyear;
+    string nation;
 public:
     Book();
     Book(const int&, const string&, const string&);
