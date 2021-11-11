@@ -48,10 +48,55 @@ void qlsv::addtail(const sv &s)
 void qlsv::show()
 {
     int k = 0;
-    nodesv *p = new nodesv;
-    p = this->head;
-    for (p; p != nullptr; p = p->next)
+    nodesv *p;
+    for (p = this->head; p != nullptr; p = p->next)
     {
+        if (p == head)
+            p->data.show();
+        else
+        {
+            cout << "_______________________________________" << endl;
+            cout << "MSSV: " << p->data.getmssv() << endl;
+            cout << "Ho va ten: " << p->data.getname() << endl;
+        }
+        k++;
+    }
+    delete p;
+    cout << "*********************************************";
+    cout << "*      Tong so sinh vien la :" << k << "     *";
+    cout << "*********************************************" << endl;
+}
+void qlsv::Delete(const string &s)
+{
+    nodesv *p = this->head;
+    int k = 0;
+    while (p != nullptr)
+    {
+        if (this->head->data.getmssv() == s)
+        {
+            this->head = this->head->next;
+            k++;
+            break;
+        }
+        else if ((this->tail->data.getmssv() == s) && (p->data.getmssv() == s))
+        {
+            this->tail = p->prev;
+            p->prev->next = nullptr;
+            k++;
+            break;
+        }
+        else if (p->data.getmssv() == s)
+        {
+            p->prev->next = p->next;
+            p->next->prev = p->prev;
+            k++;
+            break;
+        }
+        p = p->next;
+    }
+    if (k == 1)
+    {
+        cout << "Xoa thanh cong sinh vien: " << endl;
         cout << "_______________________________________" << endl;
         cout << "MSSV: " << p->data.getmssv() << endl;
         cout << "Ho va ten: " << p->data.getname() << endl;
@@ -59,9 +104,11 @@ void qlsv::show()
         cout << "Khoa: " << p->data.getfaculty() << endl;
         cout << "So dien thoai: " << p->data.getphonenumber() << endl;
         cout << "_______________________________________" << endl;
-        k++;
     }
-    cout << "So lan dem la :" << k;
+    else if (k == 0)
+    {
+        cout << "Khong tim thay ma so sinh vien can xoa" << endl;
+    }
 }
 void qlsv::searchid(const string &t)
 {

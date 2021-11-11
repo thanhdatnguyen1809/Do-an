@@ -18,6 +18,7 @@ public:
     void addhead(const sv &);
     void addtail(const sv &);
     void show();
+    void Delete(const string &);
     void searchname(const string &);
     void searchid(const string &);
 };

@@ -10,6 +10,7 @@ int main()
     ifstream fileDel;
     ifstream fileDel2; // mở file DelBook 1 lần nữa
     ifstream fileBorrow;
+    ifstream delsv1; // mo file xoa sinh vien
     int chucnangmenu;
     qlsv db;
     QLS l1;  // nhap sach vao kho sach
@@ -17,7 +18,7 @@ int main()
     sv p;
     string mssv, hoten, lop, khoa, sdt, t;
     int i = 1;
-    string findName, findid, timsv;
+    string findName, findid, timsv, deleteid;
     Node *sn = new Node;
     Node *sid = new Node;
     cout << "Chuonng trinh quan ly thu vien...... " << endl;
@@ -33,7 +34,8 @@ int main()
         cout << "7. Them sinh vien tu file" << endl;
         cout << "8. Xuat thong tin sinh vien" << endl;
         cout << "9. Tim kiem sinh vien" << endl;
-        cout << "10. Gia han sach" << endl;
+        cout << "10. Xoa sinh vien" << endl;
+        cout << "11. Gia han sach" << endl;
         cout << "Chon chuc nang: ";
         cin >> chucnangmenu;
         switch (chucnangmenu)
@@ -233,6 +235,7 @@ int main()
             system("pause");
             break;
         case 8:
+            system("cls");
             db.show();
             system("pause");
             break;
@@ -256,9 +259,17 @@ int main()
                 getline(cin, timsv);
                 db.searchname(timsv);
                 system("pause");
+                break;
             default:
                 break;
             }
+            break;
+        case 10:
+            system("cls");
+            cout << "Nhap ma so sinh vien can xoa: ";
+            cin >> deleteid;
+            db.Delete(deleteid);
+            system("pause");
             break;
         default:
             return 0;
