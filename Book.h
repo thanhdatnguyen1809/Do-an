@@ -21,5 +21,10 @@ public:
     void SetName(const string&);
     string GetAuthor();
     void SetAuthor(const string&);
+    int GetPyear();
+    void SetPyear(const int&);
+    string GetNation();
+    void SetNation(const string&);
+    void xuat();
 };
 

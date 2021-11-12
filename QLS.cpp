@@ -56,16 +56,19 @@ void QLS::addTail(const Book& x)
 
 void QLS::xuat()
 {
+    static int dem = 0;
+    cout << "Thong tin sach trong thu vien:" << endl
+    << "_____________________________________";
     Node *p = this->head;
     while (p != NULL)
     {
-        cout << "Thong tin sach:" << endl
-        << "ID: " << p->data.GetID() << endl
-        << "Ten sach: " << p->data.GetName() << endl
-        << "Ten tac gia: " << p->data.GetAuthor() << endl
-        << "_____________________________________" << endl;
+        cout << "ID: " << p->data.GetID() << endl
+        << "Ten sach: " << p->data.GetName() << endl;
+        cout << "_____________________________________" << endl;
+        dem++;
         p = p->next;
     }
+    cout << "Trong thu vien dang co " << dem << " cuon sach" << endl;
 }
 
 
@@ -145,12 +148,16 @@ Node* QLS::searchID(const int &k)
 Node* QLS::searchName(const string& k)
 {
     Node *p = this->head;
+
     while (p != NULL)
     {
         if (p->data.GetName() == k)
+        {
             return p;
-        else
-            p = p->next;
+        }
+        p = p->next;
+        
     }
     return NULL;
+    
 }

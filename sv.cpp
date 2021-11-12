@@ -15,13 +15,12 @@ sv::~sv()
 }
 void sv::show()
 {
-    cout << "-----------------------------------" << endl;
-    cout << "Ma So Sinh Vien: " << this->mssv << endl;
+    cout << "***********************************************************************************************************" << endl;
+    cout << "*                                         DANH SACH SINH VIEN                                             *" << endl;
+    cout << "*                                                                                                         *" << endl;
+    cout << "***********************************************************************************************************" << endl;
+    cout << "MSSV: " << this->mssv << endl;
     cout << "Ho Va Ten: " << this->name << endl;
-    cout << "Lop: " << this->classs << endl;
-    cout << "Khoa: " << this->faculty << endl;
-    cout << "So Dien Thoai: " << this->phonenumber << endl;
-    cout << "-----------------------------------" << endl;
 }
 string sv::getmssv()
 {

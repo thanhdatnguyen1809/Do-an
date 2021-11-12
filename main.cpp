@@ -5,19 +5,22 @@ int quantity = 0; // số lượng của book
 
 int main()
 {
-    ifstream filein; //file nhap sv
+    ifstream filein; // file nhap sv
     ifstream fileAdd;
     ifstream fileDel;
     ifstream fileDel2; // mở file DelBook 1 lần nữa
     ifstream fileBorrow;
+    ifstream delsv1; // mo file xoa sinh vien
     int chucnangmenu;
+
+    bool isChoosed = false;
     qlsv db;
-    QLS l1; // nhap sach vao kho sach
+    QLS l1;  // nhap sach vao kho sach
     QLSM l2; // nhap sach vao he thong sach da muon
     sv p;
     string mssv, hoten, lop, khoa, sdt, t;
     int i = 1;
-    string findName, findid, timsv;
+    string findName, findid, timsv, deleteid;
     Node *sn = new Node;
     Node *sid = new Node;
     cout << "Chuonng trinh quan ly thu vien...... " << endl;
@@ -30,40 +33,47 @@ int main()
         cout << "4. Tra sach" << endl;
         cout << "5. Xuat sach" << endl;
         cout << "6. Tim kiem sach" << endl;
-        cout << "7. Them sinh vien" << endl;
+        cout << "7. Them sinh vien tu file" << endl;
         cout << "8. Xuat thong tin sinh vien" << endl;
         cout << "9. Tim kiem sinh vien" << endl;
-        cout << "10. Gia han sach" << endl;
+        cout << "10. Xoa sinh vien" << endl;
+        cout << "11. Gia han sach" << endl;
         cout << "Chon chuc nang: ";
         cin >> chucnangmenu;
         switch (chucnangmenu)
         {
         case 1:
-
             system("cls");
             fileAdd.open("AddBook.txt");
             // Thêm sách
             if (fileAdd.fail())
             {
                 cout << "Failed to open this file!" << endl;
-                return -1;
+                isChoosed = true;
+                //return -1;
             }
             while (!fileAdd.eof())
             {
                 Book b1;
-                int n;
-                string s1, s2;
+                int n, year;
+                string s1, s2, s3;
                 fileAdd >> n;
-                
+
                 b1.SetID(n);
                 fileAdd.ignore();
                 getline(fileAdd, s1);
                 b1.SetName(s1);
                 getline(fileAdd, s2);
                 b1.SetAuthor(s2);
+                fileAdd >> year;
+                b1.SetPyear(year);
+                fileAdd.ignore();
+                getline(fileAdd, s3);
+                b1.SetNation(s3);
                 l1.addTail(b1);
                 quantity++;
             }
+            if(!isChoosed) cout << "Da them " << quantity << " cuon sach" << endl;
             system("pause");
             break;
         case 2:
@@ -125,13 +135,13 @@ int main()
                 cout << "Failed to open this file!" << endl;
                 return -1;
             }
-            while(!fileBorrow.eof())
+            while (!fileBorrow.eof())
             {
                 BBook b2;
                 int n;
                 string s1, s2, s3;
                 fileBorrow >> n;
-                
+
                 b2.SetID(n);
                 fileBorrow.ignore();
                 getline(fileBorrow, s1);
@@ -152,14 +162,14 @@ int main()
             cout << "2. Xuat sach da muon" << endl;
             int luachon;
             cin >> luachon;
-            switch(luachon)
+            switch (luachon)
             {
-                case 1:
-                    l1.xuat();
-                    break;
-                case 2: 
-                    l2.xuat();
-                    break;
+            case 1:
+                l1.xuat();
+                break;
+            case 2:
+                l2.xuat();
+                break;
             }
             system("pause");
             break;
@@ -175,32 +185,24 @@ int main()
                 cout << "Nhap ID sach can xuat" << endl;
                 int findID; // ID sách cần tìm
                 cin >> findID;
-                sid = l1.searchID(findID);
-                cout << "Thong tin cua sach co ID " << findID << " la " << endl;
-                cout << "ID: " << sid->data.GetID() << endl;
-                cout << "Name: " << sid->data.GetName() << endl;
-                cout << "Author: " << sid->data.GetAuthor() << endl;
+                if(findID <= quantity || findID >= 1)
+                {
+                    sid = l1.searchID(findID);
+                    sid->data.xuat();
+                }
+                else cout << "Nhap loi" << endl;
+
                 system("pause");
                 break;
             case 2:
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
                 cin.ignore();
                 getline(cin, findName);
-                
-                sn = l1.head;
-                while (sn != NULL)
-                {
-                    if (sn->data.GetName() == findName)
-                    {
-                        cout << "Thong tin cua sach co ten " << findName << " la " << endl;
-                        cout << "ID: " << sn->data.GetID() << endl;
-                        cout << "Name: " << sn->data.GetName() << endl;
-                        cout << "Author: " << sn->data.GetAuthor() << endl;
-                    }
-                    sn = sn->next;
-                }
+                sn = l1.searchName(findName);
+                sn->data.xuat();
                 system("pause");
             default:
+                cout << "Nhap loi" << endl;
                 break;
             }
             break;
@@ -214,6 +216,9 @@ int main()
             }
             while (!filein.eof())
             {
+                sv p;
+                string mssv, hoten, lop, khoa, sdt, t;
+
                 getline(filein, mssv);
                 p.setmssv(mssv);
                 getline(filein, hoten);
@@ -224,7 +229,7 @@ int main()
                 p.setfaculty(khoa);
                 getline(filein, sdt);
                 p.setphonenumber(sdt);
-                db.add(p);
+                db.addtail(p);
             }
             filein.close();
             system("pause");
@@ -250,14 +255,24 @@ int main()
                 break;
             case 2:
                 cout << "Nhap ten sinh vien can tim" << endl;
-                cin >> timsv;
+                cin.ignore();
+                getline(cin, timsv);
                 db.searchname(timsv);
                 system("pause");
+                break;
             default:
                 break;
             }
             break;
+        case 10:
+            system("cls");
+            cout << "Nhap ma so sinh vien can xoa: ";
+            cin >> deleteid;
+            db.Delete(deleteid);
+            system("pause");
+            break;
         default:
+            cout << "Da thoat khoi chuong trinh" << endl;
             return 0;
         }
     } while (true);
