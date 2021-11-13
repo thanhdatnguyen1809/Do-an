@@ -189,8 +189,6 @@ int main()
                 cin >> findID;
                 Node2 *sidsm;
                 sidsm = new Node2;
-                try
-                {
                     if (findID <= quantity && findID >= 1)
                     {
                         sidsm = l2.searchID(findID);
@@ -210,14 +208,8 @@ int main()
                     }
                     else
                     {
-                        throw string("Khong co sach nay trong thu vien");
+                        cout << "Khong co sach nay trong thu vien";
                     }
-                }
-                catch(string e)
-                {
-                    cout << e << endl;
-                    
-                }
 
                 break;
             case 2:
