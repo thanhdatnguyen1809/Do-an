@@ -208,7 +208,7 @@ int main()
                     }
                     else
                     {
-                        cout << "Khong co sach nay trong thu vien";
+                        cout << "Khong co sach nay trong thu vien" << endl;
                     }
 
                 break;
