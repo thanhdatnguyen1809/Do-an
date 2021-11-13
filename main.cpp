@@ -185,7 +185,7 @@ int main()
                 cout << "Nhap ID sach can xuat" << endl;
                 int findID; // ID sách cần tìm
                 cin >> findID;
-                if(findID <= quantity || findID >= 1)
+                if(findID <= quantity && findID >= 1)
                 {
                     sid = l1.searchID(findID);
                     sid->data.xuat();
@@ -198,9 +198,9 @@ int main()
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
                 cin.ignore();
                 getline(cin, findName);
-                sn = l1.searchName(findName);
-                sn->data.xuat();
+                l1.searchName(findName);
                 system("pause");
+                break;
             default:
                 cout << "Nhap loi" << endl;
                 break;

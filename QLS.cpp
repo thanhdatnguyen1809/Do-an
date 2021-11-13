@@ -145,19 +145,20 @@ Node* QLS::searchID(const int &k)
     return NULL;
 }
 
-Node* QLS::searchName(const string& k)
+void QLS::searchName(const string& k)
 {
+    bool is = false;
     Node *p = this->head;
-
     while (p != NULL)
     {
         if (p->data.GetName() == k)
         {
-            return p;
+            p->data.xuat();
+            is = true;
         }
         p = p->next;
         
     }
-    return NULL;
+    if(!is) cout << "Khong co sach nay" << endl;
     
 }
