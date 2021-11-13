@@ -53,7 +53,7 @@ void QLSM::addTail(const BBook& x)
 
 
 
-void QLSM::xuat()
+void QLSM::xuatds()
 {
     Node2 *p = this->head;
     while (p != NULL)
@@ -67,4 +67,17 @@ void QLSM::xuat()
         << "_____________________________________" << endl;
         p = p->next;
     }
+}
+
+Node2* QLSM::searchID(const int& k)
+{
+    Node2 *p = this->head;
+    while (p != NULL)
+    {
+        if (p->data.GetID() == k)
+            return p;
+        else
+            p = p->next;
+    }
+    return NULL;
 }

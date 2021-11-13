@@ -50,7 +50,7 @@ int main()
             {
                 cout << "Failed to open this file!" << endl;
                 isChoosed = true;
-                //return -1;
+                // return -1;
             }
             while (!fileAdd.eof())
             {
@@ -73,7 +73,8 @@ int main()
                 l1.addTail(b1);
                 quantity++;
             }
-            if(!isChoosed) cout << "Da them " << quantity << " cuon sach" << endl;
+            if (!isChoosed)
+                cout << "Da them " << quantity << " cuon sach" << endl;
             system("pause");
             break;
         case 2:
@@ -165,10 +166,10 @@ int main()
             switch (luachon)
             {
             case 1:
-                l1.xuat();
+                l1.xuatds();
                 break;
             case 2:
-                l2.xuat();
+                l2.xuatds();
                 break;
             }
             system("pause");
@@ -182,17 +183,42 @@ int main()
             switch (s)
             {
             case 1:
+                system("cls");
                 cout << "Nhap ID sach can xuat" << endl;
                 int findID; // ID sách cần tìm
                 cin >> findID;
-                if(findID <= quantity && findID >= 1)
+                Node2 *sidsm;
+                sidsm = new Node2;
+                try
                 {
-                    sid = l1.searchID(findID);
-                    sid->data.xuat();
+                    if (findID <= quantity && findID >= 1)
+                    {
+                        sidsm = l2.searchID(findID);
+                        if (sidsm == NULL)
+                        {
+                            sid = l1.searchID(findID);
+                            if (sid == NULL)
+                            {
+                                cout << "Khong co sach nay" << endl;
+                                break;
+                            }
+                            else
+                                sid->data.xuat();
+                        }
+                        else
+                            sidsm->data.xuat();
+                    }
+                    else
+                    {
+                        throw string("Khong co sach nay trong thu vien");
+                    }
                 }
-                else cout << "Nhap loi" << endl;
+                catch(string e)
+                {
+                    cout << e << endl;
+                    
+                }
 
-                system("pause");
                 break;
             case 2:
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
@@ -205,6 +231,7 @@ int main()
                 cout << "Nhap loi" << endl;
                 break;
             }
+            system("pause");
             break;
         case 7:
             system("cls");

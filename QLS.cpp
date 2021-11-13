@@ -54,7 +54,7 @@ void QLS::addTail(const Book& x)
 }
 
 
-void QLS::xuat()
+void QLS::xuatds()
 {
     static int dem = 0;
     cout << "Thong tin sach trong thu vien:" << endl

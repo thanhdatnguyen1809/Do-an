@@ -18,7 +18,7 @@ public:
     bool isEmpty();
     void addHead(const Book &);
     void addTail(const Book &);
-    void xuat();
+    void xuatds();
     void delTail();
     void delHead();
     void delAtK(const int &k);

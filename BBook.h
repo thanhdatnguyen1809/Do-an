@@ -16,5 +16,6 @@ public:
     void SetRDate(const string &);
     string GetBorrower();
     void SetBorrower(const string&);
+    void xuat();
 };
 

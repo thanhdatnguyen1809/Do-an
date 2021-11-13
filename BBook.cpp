@@ -59,3 +59,14 @@ void BBook::SetBorrower(const string &s)
 {
     this->borrower = s;
 }
+
+void BBook::xuat()
+{
+    cout << "Thong tin sach:" << endl
+        << "ID: " << this->GetID() << endl
+        << "Ten sach: " << this->GetName() << endl
+        << "Ngay muon: " << this->GetBDate() << endl
+        << "Ngay tra: " << this->GetRDate() << endl
+        << "Nguoi muon: " << this->GetBorrower() << endl
+        << "_____________________________________" << endl;
+}
