@@ -2,7 +2,7 @@
 sv::sv()
 {
 }
-sv::sv(const string &mssv, const string &name, const string &classs, const string &faculty, const string &phonenumber)
+sv::sv(const int &mssv, const string &name, const string &classs, const string &faculty, const string &phonenumber)
 {
     this->mssv = mssv;
     this->name = name;
@@ -22,11 +22,11 @@ void sv::show()
     cout << "MSSV: " << this->mssv << endl;
     cout << "Ho Va Ten: " << this->name << endl;
 }
-string sv::getmssv()
+int sv::getmssv()
 {
     return this->mssv;
 }
-void sv::setmssv(const string &mssv)
+void sv::setmssv(const int &mssv)
 {
     this->mssv = mssv;
 }

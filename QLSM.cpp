@@ -63,7 +63,8 @@ void QLSM::xuatds()
         << "Ten sach: " << p->data.GetName() << endl
         << "Ngay muon: " << p->data.GetBDate() << endl
         << "Ngay tra: " << p->data.GetRDate() << endl
-        << "Nguoi muon: " << p->data.GetBorrower() << endl
+        << "MSSV nguoi muon: " << p->data.GetIdBorrower() << endl
+        << "Ten nguoi muon: " << p->data.GetBorrower() << endl
         << "_____________________________________" << endl;
         p = p->next;
     }
@@ -75,6 +76,37 @@ Node2* QLSM::searchID(const int& k)
     while (p != NULL)
     {
         if (p->data.GetID() == k)
+            return p;
+        else
+            p = p->next;
+    }
+    return NULL;
+}
+
+void QLSM::searchAndPrintName(const string& k)
+{
+    bool is = false;
+    Node2 *p = this->head;
+    while (p != NULL)
+    {
+        if (p->data.GetName() == k)
+        {
+            p->data.xuat();
+            is = true;
+        }
+        p = p->next;
+        
+    }
+    if(!is) cout << "Khong co sach nay" << endl;
+    
+}
+
+Node2* QLSM::searchName(const string &k)
+{
+    Node2 *p = this->head;
+    while (p != NULL)
+    {
+        if (p->data.GetName() == k)
             return p;
         else
             p = p->next;

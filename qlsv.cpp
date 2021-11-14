@@ -66,7 +66,7 @@ void qlsv::show()
     cout << "*      Tong so sinh vien la :" << k << "     *";
     cout << "*********************************************" << endl;
 }
-void qlsv::Delete(const string &s)
+void qlsv::Delete(const int &s)
 {
     nodesv *p = this->head;
     int k = 0;
@@ -110,7 +110,7 @@ void qlsv::Delete(const string &s)
         cout << "Khong tim thay ma so sinh vien can xoa" << endl;
     }
 }
-void qlsv::searchid(const string &t)
+void qlsv::searchid(const int &t)
 {
     nodesv *p = this->head;
     int k = 0;
@@ -157,4 +157,56 @@ void qlsv::searchname(const string &t)
     {
         cout << "Khong tim thay ten sinh vien can tim! " << endl;
     }
+}
+
+
+nodesv* qlsv::searchName(const string& k)
+{
+    nodesv *p = this->head;
+    while (p != NULL)
+    {
+        if (p->data.getname() == k)
+            return p;
+        else
+            p = p->next;
+    }
+    return NULL;
+}
+nodesv* qlsv::searchID(const int &id)
+{
+    nodesv *p = this->head;
+    while (p != NULL)
+    {
+        if (p->data.getmssv() == id)
+            return p;
+        else
+            p = p->next;
+    }
+    return NULL;
+}
+
+bool qlsv::checkMssv(const int&id)
+{
+    if(this->searchID(id) != NULL)
+        return true;
+    return false;
+}
+
+bool qlsv::checkNamesv(const string& name)
+{
+    if(this->searchName(name) != NULL)
+        return true;
+    return false;
+}
+
+bool qlsv::checkNameAndMssv(const int& id, const string& name)
+{
+    nodesv *check = this->searchID(id);
+    if(check != NULL)
+    {
+        if(check->data.getname() == name)
+        return true;
+    }
+    
+    return false;
 }

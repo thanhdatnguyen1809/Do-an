@@ -24,6 +24,6 @@ public:
     void delAtK(const int &k);
     Node2 *searchID(const int &k);
     Node2 *searchName(const string& k);
-
+    void searchAndPrintName(const string& k);
 };
 

@@ -41,7 +41,8 @@ string BBook::GetRDate()
     geek >> a;
 
     // cout << t1 << kq << t2;
-
+    if(a == 11) return s.substr(0, 2) + '/' + "01" + '/' + s.substr(6, 4);
+    if(a == 12) return s.substr(0, 2) + '/' + "02" + '/' + s.substr(6, 4);
     return s.substr(0, 2) + '/' + to_string(a + 2) + '/' + s.substr(6, 4);
 }
 
@@ -69,4 +70,13 @@ void BBook::xuat()
         << "Ngay tra: " << this->GetRDate() << endl
         << "Nguoi muon: " << this->GetBorrower() << endl
         << "_____________________________________" << endl;
+}
+
+int BBook::GetIdBorrower()
+{
+    return this->idBorrower;
+}
+void BBook::SetIdBorrower(const int& id)
+{
+    this->idBorrower = id;
 }

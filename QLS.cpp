@@ -145,7 +145,20 @@ Node* QLS::searchID(const int &k)
     return NULL;
 }
 
-void QLS::searchName(const string& k)
+Node* QLS::searchName(const string &k)
+{
+    Node *p = this->head;
+    while (p != NULL)
+    {
+        if (p->data.GetName() == k)
+            return p;
+        else
+            p = p->next;
+    }
+    return NULL;
+}
+
+void QLS::searchAndPrintName(const string& k)
 {
     bool is = false;
     Node *p = this->head;
@@ -161,4 +174,29 @@ void QLS::searchName(const string& k)
     }
     if(!is) cout << "Khong co sach nay" << endl;
     
+}
+
+bool QLS::checkID(const int&id)
+{
+    if(this->searchID(id) != NULL)
+        return true;
+    return false;
+}
+
+bool QLS::checkName(const string& name)
+{
+    if(this->searchName(name) != NULL)
+        return true;
+    return false;
+}
+
+bool QLS::checkNameAndID(const int& id, const string& name)
+{
+    Node *check = this->searchID(id);
+    if(check != NULL)
+    {
+        if(check->data.GetName() == name)
+            return true;
+    }
+    return false;
 }

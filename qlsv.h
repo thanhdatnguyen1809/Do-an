@@ -18,7 +18,12 @@ public:
     void addhead(const sv &);
     void addtail(const sv &);
     void show();
-    void Delete(const string &);
+    void Delete(const int &);
     void searchname(const string &);
-    void searchid(const string &);
+    void searchid(const int &);
+    nodesv* searchName(const string&);
+    nodesv* searchID(const int &);
+    bool checkMssv(const int&);
+    bool checkNamesv(const string&);
+    bool checkNameAndMssv(const int& , const string&);
 };

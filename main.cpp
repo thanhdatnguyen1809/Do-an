@@ -20,7 +20,8 @@ int main()
     sv p;
     string mssv, hoten, lop, khoa, sdt, t;
     int i = 1;
-    string findName, findid, timsv, deleteid;
+    string findName, timsv;
+    int findid;
     Node *sn = new Node;
     Node *sid = new Node;
     cout << "Chuonng trinh quan ly thu vien...... " << endl;
@@ -134,24 +135,40 @@ int main()
             if (fileBorrow.fail())
             {
                 cout << "Failed to open this file!" << endl;
-                return -1;
+                //return -1;
             }
             while (!fileBorrow.eof())
             {
                 BBook b2;
-                int n;
+                int idbook;
+                int idsv;
                 string s1, s2, s3;
-                fileBorrow >> n;
-
-                b2.SetID(n);
+                fileBorrow >> idbook;
                 fileBorrow.ignore();
                 getline(fileBorrow, s1);
-                b2.SetName(s1);
                 getline(fileBorrow, s2);
-                b2.SetBDate(s2);
+                fileBorrow >> idsv;
+                fileBorrow.ignore();
                 getline(fileBorrow, s3);
-                b2.SetBorrower(s3);
-                l2.addTail(b2);
+                if(l1.checkNameAndID(idbook,s1) && db.checkNameAndMssv(idsv,s3))
+                {
+                    b2.SetID(idbook);
+                    b2.SetName(s1);
+                    b2.SetBDate(s2);
+                    b2.SetIdBorrower(idsv);
+                    b2.SetBorrower(s3);
+                    l2.addTail(b2);
+                }
+                else
+                {
+                    //fileBorrow.ignore();
+                    //getline(fileBorrow, s1);
+                    //getline(fileBorrow, s2);
+                    //getline(fileBorrow, s3);
+                    cout << "Du lieu sach co ID: "<< idbook << " khong hop le" << endl;
+                    
+                }
+                
             }
             system("pause");
             break;
@@ -216,8 +233,16 @@ int main()
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
                 cin.ignore();
                 getline(cin, findName);
-                l1.searchName(findName);
-                system("pause");
+                if(l2.searchName(findName) != NULL)
+                {
+                    l2.searchAndPrintName(findName);
+                }
+                else
+                {
+                    l1.searchAndPrintName(findName);
+                }
+                
+                //system("pause");
                 break;
             default:
                 cout << "Nhap loi" << endl;
@@ -236,9 +261,10 @@ int main()
             while (!filein.eof())
             {
                 sv p;
-                string mssv, hoten, lop, khoa, sdt, t;
-
-                getline(filein, mssv);
+                string hoten, lop, khoa, sdt, t;
+                int mssv;
+                filein >> mssv;
+                filein.ignore();
                 p.setmssv(mssv);
                 getline(filein, hoten);
                 p.setname(hoten);
@@ -284,6 +310,7 @@ int main()
             }
             break;
         case 10:
+            int deleteid;
             system("cls");
             cout << "Nhap ma so sinh vien can xoa: ";
             cin >> deleteid;

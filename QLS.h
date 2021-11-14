@@ -23,7 +23,10 @@ public:
     void delHead();
     void delAtK(const int &k);
     Node *searchID(const int &k);
-    void searchName(const string& k);
-
+    Node *searchName(const string&);
+    void searchAndPrintName(const string& k);
+    bool checkID(const int&);
+    bool checkName(const string&);
+    bool checkNameAndID(const int&, const string&);
 };  
 

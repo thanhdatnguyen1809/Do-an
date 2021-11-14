@@ -5,7 +5,7 @@ using namespace std;
 class sv
 {
 private:
-    string mssv;
+    int mssv;
     string name;
     string classs;
     string faculty;
@@ -13,11 +13,11 @@ private:
 
 public:
     sv();
-    sv(const string &, const string &, const string &, const string &, const string &);
+    sv(const int &, const string &, const string &, const string &, const string &);
     ~sv();
     void show();
-    string getmssv();
-    void setmssv(const string &);
+    int getmssv();
+    void setmssv(const int &);
     string getname();
     void setname(const string &);
     string getclasss();
