@@ -29,4 +29,5 @@ public:
     void searchborrowerid(const int &);
     void searchborrower(const string &);
     void giahan(const int &, const int &);
+    bool checkSM(const int&);
 };

@@ -85,7 +85,7 @@ int main()
             if (fileDel.fail())
             {
                 cout << "Failed to open this file!" << endl;
-                return -1;
+                //return -1;
             }
             while (!fileDel.eof())
             {
@@ -150,7 +150,7 @@ int main()
                 fileBorrow >> idsv;
                 fileBorrow.ignore();
                 getline(fileBorrow, s3);
-                if (l1.checkNameAndID(idbook, s1) && db.checkNameAndMssv(idsv, s3))
+                if (l1.checkNameAndID(idbook, s1) && db.checkNameAndMssv(idsv, s3) && !l2.checkSM(idbook))
                 {
                     b2.SetID(idbook);
                     b2.SetName(s1);

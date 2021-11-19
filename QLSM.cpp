@@ -188,3 +188,10 @@ void QLSM::giahan(const int &a, const int &b)
         p = p->next;
     }
 }
+
+bool QLSM::checkSM(const int& id)
+{
+    if(this->searchID(id) != NULL)
+        return true;
+    return false;
+}
