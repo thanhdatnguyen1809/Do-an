@@ -159,8 +159,7 @@ void qlsv::searchname(const string &t)
     }
 }
 
-
-nodesv* qlsv::searchName(const string& k)
+nodesv *qlsv::searchName(const string &k)
 {
     nodesv *p = this->head;
     while (p != NULL)
@@ -172,7 +171,7 @@ nodesv* qlsv::searchName(const string& k)
     }
     return NULL;
 }
-nodesv* qlsv::searchID(const int &id)
+nodesv *qlsv::searchID(const int &id)
 {
     nodesv *p = this->head;
     while (p != NULL)
@@ -185,28 +184,34 @@ nodesv* qlsv::searchID(const int &id)
     return NULL;
 }
 
-bool qlsv::checkMssv(const int&id)
+bool qlsv::checkMssv(const int &id)
 {
-    if(this->searchID(id) != NULL)
+    if (this->searchID(id) != NULL)
         return true;
     return false;
 }
 
-bool qlsv::checkNamesv(const string& name)
+bool qlsv::checkNamesv(const string &name)
 {
-    if(this->searchName(name) != NULL)
+    if (this->searchName(name) != NULL)
         return true;
     return false;
 }
 
-bool qlsv::checkNameAndMssv(const int& id, const string& name)
+bool qlsv::checkNameAndMssv(const int &id, const string &name)
 {
     nodesv *check = this->searchID(id);
-    if(check != NULL)
+    if (check != NULL)
     {
-        if(check->data.getname() == name)
-        return true;
+        if (check->data.getname() == name)
+            return true;
     }
-    
+
     return false;
+}
+int qlsv::tongsosach(const int &id)
+{
+    nodesv *p = this->searchID(id);
+    p->data.settongsachmuon(p->data.gettongsachmuon() + 1);
+    return p->data.gettongsachmuon();
 }

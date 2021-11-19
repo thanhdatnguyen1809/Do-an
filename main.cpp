@@ -85,7 +85,7 @@ int main()
             if (fileDel.fail())
             {
                 cout << "Failed to open this file!" << endl;
-                //return -1;
+                // return -1;
             }
             while (!fileDel.eof())
             {
@@ -142,6 +142,7 @@ int main()
                 BBook b2;
                 int idbook;
                 int idsv;
+                int k;
                 string s1, s2, s3;
                 fileBorrow >> idbook;
                 fileBorrow.ignore();
@@ -152,12 +153,31 @@ int main()
                 getline(fileBorrow, s3);
                 if (l1.checkNameAndID(idbook, s1) && db.checkNameAndMssv(idsv, s3) && !l2.checkSM(idbook))
                 {
-                    b2.SetID(idbook);
-                    b2.SetName(s1);
-                    b2.SetBDate(s2);
-                    b2.SetIdBorrower(idsv);
-                    b2.SetBorrower(s3);
-                    l2.addTail(b2);
+                    if (db.tongsosach(idsv) > 3)
+                    {
+                        cout << "_______________________________________" << endl
+                             << "MSSV: " << idsv << endl
+                             << "Ho va ten: " << s3 <<endl
+                              <<"muon khong thanh cong sach co : " << endl
+                             << "Id: " << idbook << endl
+                             << "Ten sach: " << s1 << endl
+                             << "boi vi muon qua 3 quyen sach"<<endl
+                             << "_______________________________________" << endl;
+                        b2.SetID(idbook);
+                        b2.SetName(s1);
+                        b2.SetBDate(s2);
+                        b2.SetIdBorrower(idsv);
+                        b2.SetBorrower(s3);
+                    }
+                    else
+                    {
+                        b2.SetID(idbook);
+                        b2.SetName(s1);
+                        b2.SetBDate(s2);
+                        b2.SetIdBorrower(idsv);
+                        b2.SetBorrower(s3);
+                        l2.addTail(b2);
+                    }
                 }
                 else
                 {
@@ -204,27 +224,27 @@ int main()
                 cin >> findID;
                 Node2 *sidsm;
                 sidsm = new Node2;
-                    if (findID <= quantity && findID >= 1)
+                if (findID <= quantity && findID >= 1)
+                {
+                    sidsm = l2.searchID(findID);
+                    if (sidsm == NULL)
                     {
-                        sidsm = l2.searchID(findID);
-                        if (sidsm == NULL)
+                        sid = l1.searchID(findID);
+                        if (sid == NULL)
                         {
-                            sid = l1.searchID(findID);
-                            if (sid == NULL)
-                            {
-                                cout << "Khong co sach nay" << endl;
-                                break;
-                            }
-                            else
-                                sid->data.xuat();
+                            cout << "Khong co sach nay" << endl;
+                            break;
                         }
                         else
-                            sidsm->data.xuat();
+                            sid->data.xuat();
                     }
                     else
-                    {
-                        cout << "Khong co sach nay trong thu vien" << endl;
-                    }
+                        sidsm->data.xuat();
+                }
+                else
+                {
+                    cout << "Khong co sach nay trong thu vien" << endl;
+                }
 
                 break;
             case 2:
@@ -259,24 +279,24 @@ int main()
 
             else
             {
-            while (!filein.eof())
-            {
-                sv p;
-                string hoten, lop, khoa, sdt, t;
-                int mssv;
-                filein >> mssv;
-                filein.ignore();
-                p.setmssv(mssv);
-                getline(filein, hoten);
-                p.setname(hoten);
-                getline(filein, lop);
-                p.setclasss(lop);
-                getline(filein, khoa);
-                p.setfaculty(khoa);
-                getline(filein, sdt);
-                p.setphonenumber(sdt);
-                db.addtail(p);
-            }
+                while (!filein.eof())
+                {
+                    sv p;
+                    string hoten, lop, khoa, sdt, t;
+                    int mssv;
+                    filein >> mssv;
+                    filein.ignore();
+                    p.setmssv(mssv);
+                    getline(filein, hoten);
+                    p.setname(hoten);
+                    getline(filein, lop);
+                    p.setclasss(lop);
+                    getline(filein, khoa);
+                    p.setfaculty(khoa);
+                    getline(filein, sdt);
+                    p.setphonenumber(sdt);
+                    db.addtail(p);
+                }
                 cout << "Them thanh cong file sinh vien" << endl;
             }
             filein.close();

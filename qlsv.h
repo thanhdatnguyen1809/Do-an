@@ -26,4 +26,5 @@ public:
     bool checkMssv(const int&);
     bool checkNamesv(const string&);
     bool checkNameAndMssv(const int& , const string&);
+    int tongsosach(const int&);
 };

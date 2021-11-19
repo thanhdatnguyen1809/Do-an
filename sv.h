@@ -10,6 +10,7 @@ private:
     string classs;
     string faculty;
     string phonenumber;
+    int tongsachmuon;
 
 public:
     sv();
@@ -26,4 +27,6 @@ public:
     void setfaculty(const string &);
     string getphonenumber();
     void setphonenumber(const string &);
+    int gettongsachmuon();
+    void settongsachmuon(const int &);
 };

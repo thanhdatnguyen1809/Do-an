@@ -1,8 +1,9 @@
 #include "sv.h"
 sv::sv()
 {
+this->tongsachmuon=0;
 }
-sv::sv(const int &mssv, const string &name, const string &classs, const string &faculty, const string &phonenumber)
+sv::sv(const int &mssv, const string &name, const string &classs, const string &faculty, const string &phonenumber) : tongsachmuon(-2)
 {
     this->mssv = mssv;
     this->name = name;
@@ -61,4 +62,12 @@ string sv::getphonenumber()
 void sv::setphonenumber(const string &phonenumber)
 {
     this->phonenumber = phonenumber;
+}
+int sv::gettongsachmuon()
+{
+    return this->tongsachmuon;
+}
+void sv::settongsachmuon(const int &s)
+{
+    this->tongsachmuon = s;
 }
