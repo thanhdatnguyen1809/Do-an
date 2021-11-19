@@ -135,7 +135,7 @@ int main()
             if (fileBorrow.fail())
             {
                 cout << "Failed to open this file!" << endl;
-                //return -1;
+                // return -1;
             }
             while (!fileBorrow.eof())
             {
@@ -150,7 +150,7 @@ int main()
                 fileBorrow >> idsv;
                 fileBorrow.ignore();
                 getline(fileBorrow, s3);
-                if(l1.checkNameAndID(idbook,s1) && db.checkNameAndMssv(idsv,s3))
+                if (l1.checkNameAndID(idbook, s1) && db.checkNameAndMssv(idsv, s3))
                 {
                     b2.SetID(idbook);
                     b2.SetName(s1);
@@ -161,14 +161,12 @@ int main()
                 }
                 else
                 {
-                    //fileBorrow.ignore();
-                    //getline(fileBorrow, s1);
-                    //getline(fileBorrow, s2);
-                    //getline(fileBorrow, s3);
-                    cout << "Du lieu sach co ID: "<< idbook << " khong hop le" << endl;
-                    
+                    // fileBorrow.ignore();
+                    // getline(fileBorrow, s1);
+                    // getline(fileBorrow, s2);
+                    // getline(fileBorrow, s3);
+                    cout << "Du lieu sach co ID: " << idbook << " khong hop le" << endl;
                 }
-                
             }
             system("pause");
             break;
@@ -233,7 +231,7 @@ int main()
                 cout << "Nhap ten sach can xuat" << endl; // ID sách cần tìm
                 cin.ignore();
                 getline(cin, findName);
-                if(l2.searchName(findName) != NULL)
+                if (l2.searchName(findName) != NULL)
                 {
                     l2.searchAndPrintName(findName);
                 }
@@ -241,8 +239,8 @@ int main()
                 {
                     l1.searchAndPrintName(findName);
                 }
-                
-                //system("pause");
+
+                // system("pause");
                 break;
             default:
                 cout << "Nhap loi" << endl;
@@ -258,6 +256,9 @@ int main()
                 cout << "Failed to open this file!" << endl;
                 return -1;
             }
+
+            else
+            {
             while (!filein.eof())
             {
                 sv p;
@@ -276,6 +277,8 @@ int main()
                 p.setphonenumber(sdt);
                 db.addtail(p);
             }
+                cout << "Them thanh cong file sinh vien" << endl;
+            }
             filein.close();
             system("pause");
             break;
@@ -288,14 +291,16 @@ int main()
             system("cls");
             cout << "1. Tim kiem theo MSSV" << endl;
             cout << "2. Tim kiem theo ten sinh vien" << endl;
-            int l;
-            cin >> l;
-            switch (l)
+            int f;
+            cin >> f;
+            switch (f)
             {
             case 1:
                 cout << "Nhap MSSV can tim" << endl;
                 cin >> findid;
+
                 db.searchid(findid);
+                l2.searchborrowerid(findid);
                 system("pause");
                 break;
             case 2:
@@ -303,6 +308,7 @@ int main()
                 cin.ignore();
                 getline(cin, timsv);
                 db.searchname(timsv);
+                l2.searchborrower(timsv);
                 system("pause");
                 break;
             default:
@@ -315,6 +321,16 @@ int main()
             cout << "Nhap ma so sinh vien can xoa: ";
             cin >> deleteid;
             db.Delete(deleteid);
+            system("pause");
+            break;
+        case 11:
+            system("cls");
+            int a, b;
+            cout << "Nhap ma so sinh vien : ";
+            cin >> a;
+            cout << "Nhap vao ma sach can gia han: ";
+            cin >> b;
+            l2.giahan(a, b);
             system("pause");
             break;
         default:
