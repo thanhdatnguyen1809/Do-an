@@ -155,13 +155,14 @@ void QLSM::searchborrower(const string &b)
 void QLSM::giahan(const int &a, const int &b)
 {
     string s;
+    int k = 0;
     Node2 *p = this->head;
     while (p != nullptr)
     {
         if (p->data.GetIdBorrower() == a && p->data.GetID() == b)
         {
             p->data.xuat();
-
+            k++;
             cout << "Ban co muon gia han sach them 2 thang ko" << endl;
             cout << "Sure? (Y/N)" << endl;
             char YN; // yes or no
@@ -187,6 +188,8 @@ void QLSM::giahan(const int &a, const int &b)
         }
         p = p->next;
     }
+    if (k == 0)
+        cout << "Ban chua tung muon cuon sach nay" << endl;
 }
 
 bool QLSM::checkSM(const int &id)
@@ -196,3 +199,50 @@ bool QLSM::checkSM(const int &id)
     return false;
 }
 
+void QLSM::Delete(const int &s)
+{
+    Node2 *p = this->head;
+    int k = 0;
+    while (p != nullptr)
+    {
+        if (this->head->data.GetID() == s)
+        {
+            this->head = this->head->next;
+            k++;
+            break;
+        }
+        else if ((this->tail->data.GetID() == s) && (p->data.GetID() == s))
+        {
+            this->tail = p->prev;
+            p->prev->next = nullptr;
+            k++;
+            break;
+        }
+        else if (p->data.GetID() == s)
+        {
+            p->prev->next = p->next;
+            p->next->prev = p->prev;
+            k++;
+            break;
+        }
+        p = p->next;
+    }
+    if (k == 1)
+    {
+        cout << "_____________________________________" << endl
+             << "TRA SACH THANG CONG: " << endl
+             << "_____________________________________" << endl
+             << "Thong tin sach:" << endl
+             << "ID: " << p->data.GetID() << endl
+             << "Ten sach: " << p->data.GetName() << endl
+             << "Ngay muon: " << p->data.GetBDate() << endl
+             << "Ngay tra: " << p->data.GetRDate() << endl
+             << "MSSV nguoi muon: " << p->data.GetIdBorrower() << endl
+             << "Ten nguoi muon: " << p->data.GetBorrower() << endl
+             << "_____________________________________" << endl;
+    }
+    else if (k == 0)
+    {
+        cout << "Sach chua duoc muon" << endl;
+    }
+}

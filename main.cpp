@@ -157,11 +157,11 @@ int main()
                     {
                         cout << "_______________________________________" << endl
                              << "MSSV: " << idsv << endl
-                             << "Ho va ten: " << s3 <<endl
-                              <<"muon khong thanh cong sach co : " << endl
+                             << "Ho va ten: " << s3 << endl
+                             << "muon khong thanh cong sach co : " << endl
                              << "Id: " << idbook << endl
                              << "Ten sach: " << s1 << endl
-                             << "boi vi muon qua 3 quyen sach"<<endl
+                             << "boi vi muon qua 3 quyen sach" << endl
                              << "_______________________________________" << endl;
                         b2.SetID(idbook);
                         b2.SetName(s1);
@@ -191,6 +191,12 @@ int main()
             system("pause");
             break;
         case 4:
+            system("cls");
+            cout<<"Nhap ma id sach can tra: ";
+            int kk;
+            cin>>kk;
+            l2.Delete(kk);
+            system("pause");
             break;
         case 5:
             system("cls");

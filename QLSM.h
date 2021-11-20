@@ -30,4 +30,5 @@ public:
     void searchborrower(const string &);
     void giahan(const int &, const int &);
     bool checkSM(const int &);
+    void Delete(const int &s);
 };
