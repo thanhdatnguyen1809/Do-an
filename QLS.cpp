@@ -1,5 +1,5 @@
 #include "QLS.h"
-
+#include <fstream>
 QLS::QLS()
 {
     this->head = this->tail = NULL;
@@ -60,16 +60,21 @@ void QLS::xuatds()
     cout << "Thong tin sach trong thu vien:" << endl
     << "_____________________________________";
     Node *p = this->head;
+    ofstream ofs("filexuatsachtrongthuvien.txt");
     while (p != NULL)
     {
         cout << "ID: " << p->data.GetID() << endl
         << "Ten sach: " << p->data.GetName() << endl;
         cout << "_____________________________________" << endl;
+        ofs << "ID: " << p->data.GetID() << endl
+        << "Ten sach: " << p->data.GetName() << endl;
+        ofs << "_____________________________________" << endl;
         dem++;
         p = p->next;
     }
+    ofs.close();
     cout << "Trong thu vien dang co " << dem << " cuon sach" << endl;
-}
+}   
 
 
 

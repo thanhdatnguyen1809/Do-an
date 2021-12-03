@@ -1,4 +1,5 @@
 #include "sv.h"
+static int j=0;
 struct nodesv
 {
     sv data;

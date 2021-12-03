@@ -47,17 +47,31 @@ void qlsv::addtail(const sv &s)
 }
 void qlsv::show()
 {
+
+    ofstream ofs("filexuatdanhsachsinhvien.txt");
     int k = 0;
     nodesv *p;
     for (p = this->head; p != nullptr; p = p->next)
     {
         if (p == head)
+        {
             p->data.show();
+            ofs << "***********************************************************************************************************" << endl;
+            ofs << "*                                         DANH SACH SINH VIEN                                             *" << endl;
+            ofs << "*                                                                                                         *" << endl;
+            ofs << "***********************************************************************************************************" << endl;
+            ofs << "MSSV: " << p->data.getmssv() << endl;
+            ofs << "Ho Va Ten: " << p->data.getname() << endl;
+        }
         else
         {
             cout << "_______________________________________" << endl;
             cout << "MSSV: " << p->data.getmssv() << endl;
             cout << "Ho va ten: " << p->data.getname() << endl;
+
+            ofs << "_______________________________________" << endl;
+            ofs << "MSSV: " << p->data.getmssv() << endl;
+            ofs << "Ho va ten: " << p->data.getname() << endl;
         }
         k++;
     }
@@ -65,6 +79,11 @@ void qlsv::show()
     cout << "*********************************************";
     cout << "*      Tong so sinh vien la :" << k << "     *";
     cout << "*********************************************" << endl;
+
+    ofs << "*********************************************";
+    ofs << "*      Tong so sinh vien la :" << k << "     *";
+    ofs << "*********************************************" << endl;
+    ofs.close();
 }
 void qlsv::Delete(const int &s)
 {

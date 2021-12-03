@@ -1,5 +1,5 @@
 #include "QLSM.h"
-
+#include <fstream>
 QLSM::QLSM()
 {
     this->head = this->tail = NULL;
@@ -53,6 +53,7 @@ void QLSM::addTail(const BBook &x)
 
 void QLSM::xuatds()
 {
+    ofstream ofs("filexuatsachdamuon.txt");
     Node2 *p = this->head;
     while (p != NULL)
     {
@@ -64,6 +65,14 @@ void QLSM::xuatds()
              << "MSSV nguoi muon: " << p->data.GetIdBorrower() << endl
              << "Ten nguoi muon: " << p->data.GetBorrower() << endl
              << "_____________________________________" << endl;
+        ofs << "Thong tin sach:" << endl
+            << "ID: " << p->data.GetID() << endl
+            << "Ten sach: " << p->data.GetName() << endl
+            << "Ngay muon: " << p->data.GetBDate() << endl
+            << "Ngay tra: " << p->data.GetRDate() << endl
+            << "MSSV nguoi muon: " << p->data.GetIdBorrower() << endl
+            << "Ten nguoi muon: " << p->data.GetBorrower() << endl
+            << "_____________________________________" << endl;
         p = p->next;
     }
 }
@@ -119,7 +128,8 @@ void QLSM::searchborrowerid(const int &i)
         if (p->data.GetIdBorrower() == i)
         {
             k++;
-            cout << "Thong tin sach:" << endl
+            cout << "Sach muon: " << k << endl
+                 << "Thong tin sach:" << endl
                  << "ID: " << p->data.GetID() << endl
                  << "Ten sach: " << p->data.GetName() << endl
                  << "Ngay muon: " << p->data.GetBDate() << endl
@@ -128,8 +138,6 @@ void QLSM::searchborrowerid(const int &i)
         }
         p = p->next;
     }
-    cout << "Tong so sach dang muon: " << k << endl
-         << "_____________________________________" << endl;
 }
 void QLSM::searchborrower(const string &b)
 {
@@ -140,7 +148,8 @@ void QLSM::searchborrower(const string &b)
         if (p->data.GetBorrower() == b)
         {
             k++;
-            cout << "Thong tin sach:" << endl
+            cout << "Sach muon: " << k << endl
+                 << "Thong tin sach:" << endl
                  << "ID: " << p->data.GetID() << endl
                  << "Ten sach: " << p->data.GetName() << endl
                  << "Ngay muon: " << p->data.GetBDate() << endl
@@ -149,8 +158,6 @@ void QLSM::searchborrower(const string &b)
         }
         p = p->next;
     }
-    cout << "Tong so sach dang muon: " << k << endl
-         << "_____________________________________" << endl;
 }
 void QLSM::giahan(const int &a, const int &b)
 {

@@ -1,0 +1,300 @@
+ID: 1
+Ten sach: Nguoi xa la
+_____________________________________
+ID: 2
+Ten sach: Di tim thoi gian da mat
+_____________________________________
+ID: 3
+Ten sach: Vu an
+_____________________________________
+ID: 4
+Ten sach: Hoang tu be
+_____________________________________
+ID: 5
+Ten sach: Than phan con nguoi
+_____________________________________
+ID: 6
+Ten sach: Hanh trinh den tan cung den toi
+_____________________________________
+ID: 7
+Ten sach: Chum nho uat han
+_____________________________________
+ID: 8
+Ten sach: Chuong nguyen hon ai
+_____________________________________
+ID: 9
+Ten sach: Le Grand Meaulnes
+_____________________________________
+ID: 10
+Ten sach: Bot thang nay
+_____________________________________
+ID: 11
+Ten sach: Gioi tinh thu hai
+_____________________________________
+ID: 12
+Ten sach: Cho doi Godot
+_____________________________________
+ID: 13
+Ten sach: Ton tai va hu vo
+_____________________________________
+ID: 14
+Ten sach: Ten cua doa hoa hong
+_____________________________________
+ID: 15
+Ten sach: Quan dao Gulag
+_____________________________________
+ID: 16
+Ten sach: Paroles
+_____________________________________
+ID: 17
+Ten sach: Alcools Guillaume
+_____________________________________
+ID: 18
+Ten sach: Bong sen xanh
+_____________________________________
+ID: 19
+Ten sach: Nhat ky Anne Frank
+_____________________________________
+ID: 20
+Ten sach: Nhiet doi buon
+_____________________________________
+ID: 21
+Ten sach: The gioi moi tuoi dep
+_____________________________________
+ID: 22
+Ten sach: Mot chien tam tu
+_____________________________________
+ID: 23
+Ten sach: Asterix xu Galois
+_____________________________________
+ID: 24
+Ten sach: La Cantatrice chauve
+_____________________________________
+ID: 25
+Ten sach: Ba tieu luan ve ly thuyet
+_____________________________________
+ID: 26
+Ten sach: Vuc tham
+_____________________________________
+ID: 27
+Ten sach: Lolita
+_____________________________________
+ID: 28
+Ten sach: Ulysses
+_____________________________________
+ID: 29
+Ten sach: The Tartar Steppe
+_____________________________________
+ID: 30
+Ten sach: Bon lam bac gia
+_____________________________________
+ID: 31
+Ten sach: Le Hussard sur le toit
+_____________________________________
+ID: 32
+Ten sach: Belle du Seigneur
+_____________________________________
+ID: 33
+Ten sach: Tram nam co don
+_____________________________________
+ID: 34
+Ten sach: Am thanh va cuong no
+_____________________________________
+ID: 35
+Ten sach: Therese Desqueyroux
+_____________________________________
+ID: 36
+Ten sach: Zazie trong tau dien ngam
+_____________________________________
+ID: 37
+Ten sach: Confusion of Feelings
+_____________________________________
+ID: 38
+Ten sach: Cuon theo chieu gio
+_____________________________________
+ID: 39
+Ten sach: Nguoi tinh cua phu nhan
+_____________________________________
+ID: 40
+Ten sach: Nui than
+_____________________________________
+ID: 41
+Ten sach: Buon oi chao mi
+_____________________________________
+ID: 42
+Ten sach: Le Silence de la mer
+_____________________________________
+ID: 43
+Ten sach: La Vie mode d'emploi
+_____________________________________
+ID: 44
+Ten sach: Con cho san cua dong ho
+_____________________________________
+ID: 45
+Ten sach: Sous le soleil de Satan
+_____________________________________
+ID: 46
+Ten sach: Dai gia Gatsby
+_____________________________________
+ID: 47
+Ten sach: Loi dua cot
+_____________________________________
+ID: 48
+Ten sach: Bong ma giua trua
+_____________________________________
+ID: 49
+Ten sach: Vu am sat ong Roger Ackroyd
+_____________________________________
+ID: 50
+Ten sach: Nadja
+_____________________________________
+ID: 51
+Ten sach: Aurelien
+_____________________________________
+ID: 52
+Ten sach: Le Soulier de satin
+_____________________________________
+ID: 53
+Ten sach: Sei personaggi in cerca d'autore
+_____________________________________
+ID: 54
+Ten sach: The Resistible Rise of Arturo Ui
+_____________________________________
+ID: 55
+Ten sach: Vendredi ou les Limbes du Pacifique
+_____________________________________
+ID: 56
+Ten sach: Chien tranh giua cac the gioi
+_____________________________________
+ID: 57
+Ten sach: Se questo e un uomo
+_____________________________________
+ID: 58
+Ten sach: Chua te nhung chiec nhan
+_____________________________________
+ID: 59
+Ten sach: Les Vrilles de la vigne
+_____________________________________
+ID: 60
+Ten sach: Capitale de la douleur
+_____________________________________
+ID: 61
+Ten sach: Martin Eden
+_____________________________________
+ID: 62
+Ten sach: Ballad of the Salt Sea
+_____________________________________
+ID: 63
+Ten sach: Le Degre zero de l'ecriture
+_____________________________________
+ID: 64
+Ten sach: Danh du da mat cua Katharina Blum
+_____________________________________
+ID: 65
+Ten sach: Bo bien Syrtes
+_____________________________________
+ID: 66
+Ten sach: Les Mots et les Choses
+_____________________________________
+ID: 67
+Ten sach: Tren duong
+_____________________________________
+ID: 68
+Ten sach: Cuoc phieu luu ky dieu cua Nils
+_____________________________________
+ID: 69
+Ten sach: Can phong rieng
+_____________________________________
+ID: 70
+Ten sach: The Martian Chronicles
+_____________________________________
+ID: 71
+Ten sach: Le Ravissement de Lol V. Stein
+_____________________________________
+ID: 72
+Ten sach: Le Proces-verbal
+_____________________________________
+ID: 73
+Ten sach: Tropismes
+_____________________________________
+ID: 74
+Ten sach: Journal
+_____________________________________
+ID: 75
+Ten sach: Lord Jim
+_____________________________________
+ID: 76
+Ten sach: Ecrits
+_____________________________________
+ID: 77
+Ten sach: Le Theatre et son double
+_____________________________________
+ID: 78
+Ten sach: Manhattan Transfer
+_____________________________________
+ID: 79
+Ten sach: Ficciones
+_____________________________________
+ID: 80
+Ten sach: Moravagine
+_____________________________________
+ID: 81
+Ten sach: Vien tuong cua dao quan chet
+_____________________________________
+ID: 82
+Ten sach: Lua chon cua Sophie
+_____________________________________
+ID: 83
+Ten sach: Gypsy Ballads
+_____________________________________
+ID: 84
+Ten sach: Hanh khach bi an
+_____________________________________
+ID: 85
+Ten sach: Notre-Dame-des-Fleurs
+_____________________________________
+ID: 86
+Ten sach: The Man Without Qualities
+_____________________________________
+ID: 87
+Ten sach: Fureur et Mystere
+_____________________________________
+ID: 88
+Ten sach: Bat tre dong xanh
+_____________________________________
+ID: 89
+Ten sach: No Orchids For Miss Blandish
+_____________________________________
+ID: 90
+Ten sach: Blake et Mortimer
+_____________________________________
+ID: 91
+Ten sach: The Notebooks of Malte Laurids Brigge
+_____________________________________
+ID: 92
+Ten sach: La Modification
+_____________________________________
+ID: 93
+Ten sach: The Origins of Totalitarianism
+_____________________________________
+ID: 94
+Ten sach: Nghe nhan va Margarita
+_____________________________________
+ID: 95
+Ten sach: The Rosy Crucifixion
+_____________________________________
+ID: 96
+Ten sach: Giac ngu dai
+_____________________________________
+ID: 97
+Ten sach: Amers
+_____________________________________
+ID: 98
+Ten sach: Gaston
+_____________________________________
+ID: 99
+Ten sach: Under the Volcano
+_____________________________________
+ID: 100
+Ten sach: Nhung dua con cua nua dem
+_____________________________________

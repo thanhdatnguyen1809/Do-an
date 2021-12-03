@@ -1,0 +1,40 @@
+Thong tin sach:
+ID: 56
+Ten sach: Chien tranh giua cac the gioi
+Ngay muon: 23/02/2021
+Ngay tra: 23/4/2021
+MSSV nguoi muon: 2
+Ten nguoi muon: Nguyen Thanh Dat
+_____________________________________
+Thong tin sach:
+ID: 4
+Ten sach: Hoang tu be
+Ngay muon: 12/04/2021
+Ngay tra: 12/6/2021
+MSSV nguoi muon: 1
+Ten nguoi muon: Do Thien Hoa
+_____________________________________
+Thong tin sach:
+ID: 3
+Ten sach: Vu an
+Ngay muon: 25/10/2021
+Ngay tra: 25/12/2021
+MSSV nguoi muon: 2
+Ten nguoi muon: Nguyen Thanh Dat
+_____________________________________
+Thong tin sach:
+ID: 12
+Ten sach: Cho doi Godot
+Ngay muon: 20/8/2021
+Ngay tra: 20/10/021
+MSSV nguoi muon: 2
+Ten nguoi muon: Nguyen Thanh Dat
+_____________________________________
+Thong tin sach:
+ID: 25
+Ten sach: Ba tieu luan ve ly thuyet
+Ngay muon: 13/4/2021
+Ngay tra: 13/6/021
+MSSV nguoi muon: 15
+Ten nguoi muon: Ngo Lin Lin
+_____________________________________
